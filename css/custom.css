@@ -1,0 +1,9 @@
+
+
+/*隐藏图标*/
+#footer-wrap{
+    display: none!important;
+    visibility: hidden;
+     opacity: 0;
+  /* 三条属性择一即可 */
+}
