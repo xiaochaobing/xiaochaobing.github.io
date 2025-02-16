@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>2023年冬季周赛（一） | 郑州航院软件开发协会</title><meta name="author" content="郑航软件开发协会"><meta name="copyright" content="郑航软件开发协会"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="12345678#include &lt;stdio.h&gt;int main() &#123;    printf(&quot;\\  &#x2F;\n&quot;);    printf(&quot; \\&#x2F;\n&quot;);    printf(&quot; &#x2F;\\\n&quot;);    printf(&quot;&#x2F;  \\\n&quot;);    return 0;&#125;  2 学号">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2023年冬季周赛（一）">
+<meta property="og:url" content="https://xiaochaobing.github.io/2023/10/28/2023%E5%B9%B4%E5%86%AC%E5%AD%A3%E5%91%A8%E8%B5%9B%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:site_name" content="郑州航院软件开发协会">
+<meta property="og:description" content="12345678#include &lt;stdio.h&gt;int main() &#123;    printf(&quot;\\  &#x2F;\n&quot;);    printf(&quot; \\&#x2F;\n&quot;);    printf(&quot; &#x2F;\\\n&quot;);    printf(&quot;&#x2F;  \\\n&quot;);    return 0;&#125;  2 学号">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xiaochaobing.github.io/ZUA-ACM%E5%AE%9E%E9%AA%8C%E5%AE%A4logo/ZUA-ACM%E5%AE%9E%E9%AA%8C%E5%AE%A4logo/logo_%E7%99%BD%E5%BA%95.png">
+<meta property="article:published_time" content="2023-10-28T14:00:00.000Z">
+<meta property="article:modified_time" content="2025-02-15T09:07:47.753Z">
+<meta property="article:author" content="郑航软件开发协会">
+<meta property="article:tag" content="周赛">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xiaochaobing.github.io/ZUA-ACM%E5%AE%9E%E9%AA%8C%E5%AE%A4logo/ZUA-ACM%E5%AE%9E%E9%AA%8C%E5%AE%A4logo/logo_%E7%99%BD%E5%BA%95.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "2023年冬季周赛（一）",
+  "url": "https://xiaochaobing.github.io/2023/10/28/2023%E5%B9%B4%E5%86%AC%E5%AD%A3%E5%91%A8%E8%B5%9B%EF%BC%88%E4%B8%80%EF%BC%89/",
+  "image": "https://xiaochaobing.github.io/ZUA-ACM%E5%AE%9E%E9%AA%8C%E5%AE%A4logo/ZUA-ACM%E5%AE%9E%E9%AA%8C%E5%AE%A4logo/logo_%E7%99%BD%E5%BA%95.png",
+  "datePublished": "2023-10-28T14:00:00.000Z",
+  "dateModified": "2025-02-15T09:07:47.753Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "郑航软件开发协会",
+      "url": "https://xiaochaobing.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://xiaochaobing.github.io/2023/10/28/2023%E5%B9%B4%E5%86%AC%E5%AD%A3%E5%91%A8%E8%B5%9B%EF%BC%88%E4%B8%80%EF%BC%89/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c5d432c7a0ae1a1379020b45b61d16ba";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '2023年冬季周赛（一）',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/ZUA-ACM%E5%AE%9E%E9%AA%8C%E5%AE%A4logo/ZUA-ACM%E5%AE%9E%E9%AA%8C%E5%AE%A4logo/logo_%E7%99%BD%E5%BA%95.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 博客文章</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-book"></i><span> 实验室</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/team/"><i class="fa-fw fas fa-users"></i><span> 成员</span></a></li><li><a class="site-page child" href="/award/"><i class="fa-fw fas fa-award"></i><span> 荣耀</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-camera"></i><span> 照片</span></a></li><li><a class="site-page child" href="/inherit/"><i class="fa-fw fas fa-heart"></i><span> 寄语新队员</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-heart"></i><span> 关于我们</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/we/"><i class="fa-fw fas fa-info-circle"></i><span> 实验室介绍</span></a></li><li><a class="site-page child" href="/contest/"><i class="fa-fw fas fa-trophy"></i><span> 赛事介绍</span></a></li><li><a class="site-page child" href="/guide/"><i class="fa-fw fas fa-book-open"></i><span> 入门指南</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">郑州航院软件开发协会</span></a><a class="nav-page-title" href="/"><span class="site-name">2023年冬季周赛（一）</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 博客文章</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-book"></i><span> 实验室</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/team/"><i class="fa-fw fas fa-users"></i><span> 成员</span></a></li><li><a class="site-page child" href="/award/"><i class="fa-fw fas fa-award"></i><span> 荣耀</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-camera"></i><span> 照片</span></a></li><li><a class="site-page child" href="/inherit/"><i class="fa-fw fas fa-heart"></i><span> 寄语新队员</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-heart"></i><span> 关于我们</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/we/"><i class="fa-fw fas fa-info-circle"></i><span> 实验室介绍</span></a></li><li><a class="site-page child" href="/contest/"><i class="fa-fw fas fa-trophy"></i><span> 赛事介绍</span></a></li><li><a class="site-page child" href="/guide/"><i class="fa-fw fas fa-book-open"></i><span> 入门指南</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">2023年冬季周赛（一）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-10-28T14:00:00.000Z" title="发表于 2023-10-28 22:00:00">2023-10-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-15T09:07:47.753Z" title="更新于 2025-02-15 17:07:47">2025-02-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\\  /\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot; \\/\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot; /\\\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;/  \\\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-学号"><a href="#2-学号" class="headerlink" title="2 学号"></a>2 学号</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">char</span> s[<span class="number">20</span>];</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, s);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;20%c%c&quot;</span>, s[<span class="number">0</span>], s[<span class="number">1</span>]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-平均数"><a href="#3-平均数" class="headerlink" title="3 平均数"></a>3 平均数</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">double</span> a, b, c, d, n, z;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c &gt;&gt; d;</span><br><span class="line">    z = (a * <span class="number">2.0</span> + b * <span class="number">3.0</span> + c * <span class="number">4.0</span> + d) / <span class="number">10.0</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Media: &quot;</span> &lt;&lt; z &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">if</span> (z &gt;= <span class="number">7.0</span>)</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Aluno aprovado.&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (z &lt; <span class="number">5.0</span>)</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Aluno reprovado.&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (z &lt; <span class="number">7.0</span> &amp;&amp; z &gt;= <span class="number">5.0</span>) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Aluno em exame.&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-质数"><a href="#4-质数" class="headerlink" title="4 质数"></a>4 质数</h2><p>所有人必须掌握：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">isPrime</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i * i &lt;= x; i++)</span><br><span class="line">        <span class="keyword">if</span> (x % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> x &gt; <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">while</span>(n--) &#123;</span><br><span class="line">        <span class="type">int</span> x;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;x);</span><br><span class="line">        <span class="keyword">if</span> (isPrime(x)) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d is prime\n&quot;</span>, x);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d is not prime\n&quot;</span>, x);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>有能力的可以学习这个：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 1000005</span></span><br><span class="line"><span class="type">int</span> isPrime[N + <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= N; i++)</span><br><span class="line">        isPrime[i] = <span class="number">1</span>;</span><br><span class="line">    isPrime[<span class="number">0</span>] = isPrime[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">2</span> * i; j &lt;= N; j += i)</span><br><span class="line">            isPrime[j] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(n--) &#123;</span><br><span class="line">        <span class="type">int</span> x;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;x);</span><br><span class="line">        <span class="keyword">if</span> (isPrime[x]) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d is prime\n&quot;</span>, x);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d is not prime\n&quot;</span>, x);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-斐波那契数列"><a href="#5-斐波那契数列" class="headerlink" title="5 斐波那契数列"></a>5 斐波那契数列</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> a[<span class="number">100</span>];</span><br><span class="line">    a[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    a[<span class="number">2</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">3</span>; i &lt;= n; i++)</span><br><span class="line">        a[i] = a[i - <span class="number">1</span>] + a[i - <span class="number">2</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[i]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://xiaochaobing.github.io">郑航软件开发协会</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://xiaochaobing.github.io/2023/10/28/2023%E5%B9%B4%E5%86%AC%E5%AD%A3%E5%91%A8%E8%B5%9B%EF%BC%88%E4%B8%80%EF%BC%89/">https://xiaochaobing.github.io/2023/10/28/2023%E5%B9%B4%E5%86%AC%E5%AD%A3%E5%91%A8%E8%B5%9B%EF%BC%88%E4%B8%80%EF%BC%89/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://xiaochaobing.github.io" target="_blank">郑州航院软件开发协会</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%91%A8%E8%B5%9B/">周赛</a></div><div class="post-share"><div class="social-share" data-image="/ZUA-ACM%E5%AE%9E%E9%AA%8C%E5%AE%A4logo/ZUA-ACM%E5%AE%9E%E9%AA%8C%E5%AE%A4logo/logo_%E7%99%BD%E5%BA%95.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2023/10/22/2023%E6%8B%9B%E6%96%B0%E5%AE%A3%E8%AE%B2%E4%BC%9A/" title="2023招新宣讲会"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">2023招新宣讲会</div></div><div class="info-2"><div class="info-item-1"> </div></div></div></a><a class="pagination-related" href="/2023/11/04/2023%E5%B9%B4%E5%86%AC%E5%AD%A3%E5%91%A8%E8%B5%9B%EF%BC%88%E4%BA%8C%EF%BC%89/" title="2023年冬季周赛（二）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">2023年冬季周赛（二）</div></div><div class="info-2"><div class="info-item-1">2 a+b?1234567891011121314151617181920212223242526272829#include &lt;stdio.h&gt;#include &lt;string.h&gt;int a[1000005], b[1000005], ans[1000005];char s[1000005], t[1000005];int max(int a, int b) &#123; return a &gt; b ? a : b; &#125;int main() &#123;    scanf(&quot;%s&quot;, s);    scanf(&quot;%s&quot;, t);    int len1 = strlen(s), len2 = strlen(t);    for (int i = len1 - 1, j = 0; i &gt;= 0; i--, j++) &#123;        a[j] = s[i] - &#x27;0&#x27;;    &#125;    for (int i = len2 - 1, j = 0; i...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2023/11/11/2023%E5%B9%B4%E5%86%AC%E5%AD%A3%E5%91%A8%E8%B5%9B%EF%BC%88%E4%B8%89%EF%BC%89/" title="2023年冬季周赛（三）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-11</div><div class="info-item-2">2023年冬季周赛（三）</div></div><div class="info-2"><div class="info-item-1">1 找最大值1234567891011#include &lt;stdio.h&gt;int main() &#123;    int mx = 0;    for (int i = 0; i &lt; 4; i++) &#123;        int x;        scanf(&quot;%d&quot;, &amp;x);        mx = mx &gt; x ? mx : x;    &#125;    printf(&quot;%d\n&quot;, mx);&#125;  2 二三得六12345678910111213141516171819202122232425#include &lt;stdio.h&gt;int main() &#123;    int n, m;    scanf(&quot;%d %d&quot;, &amp;n, &amp;m);    int d = m / n;    if (m % n != 0) &#123;        printf(&quot;-1\n&quot;);        return 0;   ...</div></div></div></a><a class="pagination-related" href="/2023/11/04/2023%E5%B9%B4%E5%86%AC%E5%AD%A3%E5%91%A8%E8%B5%9B%EF%BC%88%E4%BA%8C%EF%BC%89/" title="2023年冬季周赛（二）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-04</div><div class="info-item-2">2023年冬季周赛（二）</div></div><div class="info-2"><div class="info-item-1">2 a+b?1234567891011121314151617181920212223242526272829#include &lt;stdio.h&gt;#include &lt;string.h&gt;int a[1000005], b[1000005], ans[1000005];char s[1000005], t[1000005];int max(int a, int b) &#123; return a &gt; b ? a : b; &#125;int main() &#123;    scanf(&quot;%s&quot;, s);    scanf(&quot;%s&quot;, t);    int len1 = strlen(s), len2 = strlen(t);    for (int i = len1 - 1, j = 0; i &gt;= 0; i--, j++) &#123;        a[j] = s[i] - &#x27;0&#x27;;    &#125;    for (int i = len2 - 1, j = 0; i...</div></div></div></a><a class="pagination-related" href="/2023/11/18/2023%E5%B9%B4%E5%86%AC%E5%AD%A3%E5%91%A8%E8%B5%9B%EF%BC%88%E5%9B%9B%EF%BC%89/" title="2023年冬季周赛（四）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-18</div><div class="info-item-2">2023年冬季周赛（四）</div></div><div class="info-2"><div class="info-item-1">1 点燃我，温暖你123456789101112131415161718#include&lt;stdio.h&gt;int main()&#123;    printf(&quot;   *********   *********\n&quot;);    printf(&quot;************* *************\n&quot;);    printf(&quot;*****************************\n&quot;);    printf(&quot;*****************************\n&quot;);    printf(&quot;*****************************\n&quot;);    printf(&quot; ***************************\n&quot;);    printf(&quot;   ***********************\n&quot;);    printf(&quot;    ...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/ZUA-ACM%E5%AE%9E%E9%AA%8C%E5%AE%A4logo/ZUA-ACM%E5%AE%9E%E9%AA%8C%E5%AE%A4logo/logo_%E7%99%BD%E5%BA%95.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">郑航软件开发协会</div><div class="author-info-description">郑州航院软件开发协会是一支以培养学生编程兴趣和算法能力为目标的学生团队。我们不仅在校内提供丰富的编程语言、数据结构和算法学习资源，还积极组织各种程序设计竞赛训练，为同学们创造了广阔的实践交流平台。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" href="/we/"><i class="fas fas fa-users"></i><span>加入我们</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/acmzua" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AD%A6%E5%8F%B7"><span class="toc-number">1.</span> <span class="toc-text">2 学号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%B9%B3%E5%9D%87%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">3 平均数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%B4%A8%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text">4 质数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97"><span class="toc-number">4.</span> <span class="toc-text">5 斐波那契数列</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/aboutUs/" title="了解我们">了解我们</a><time datetime="2025-02-15T11:46:56.678Z" title="发表于 2025-02-15 19:46:56">2025-02-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/05/puzzle2024/" title="2024年招新解谜活动">2024年招新解谜活动</a><time datetime="2024-10-05T10:12:02.000Z" title="发表于 2024-10-05 18:12:02">2024-10-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/14/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" title="ICPC 常用算法模板">ICPC 常用算法模板</a><time datetime="2024-05-13T16:00:00.000Z" title="发表于 2024-05-14 00:00:00">2024-05-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/24/2024%E5%A4%A9%E6%A2%AF%E8%B5%9B%E9%80%89%E6%8B%94%E8%B5%9B%EF%BC%88%E4%B8%80%EF%BC%89/" title="2024天梯赛选拔赛（一）">2024天梯赛选拔赛（一）</a><time datetime="2023-12-24T10:00:00.000Z" title="发表于 2023-12-24 18:00:00">2023-12-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/17/%E7%AE%97%E6%B3%95%E9%9B%86%E8%AE%AD-1-C-STL%E5%9F%BA%E7%A1%80/" title="算法集训#1:C++STL基础">算法集训#1:C++STL基础</a><time datetime="2023-12-17T11:00:00.000Z" title="发表于 2023-12-17 19:00:00">2023-12-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By 郑航软件开发协会</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: 'lIjvbc26pKyjDeBWUqNsssEB-gzGzoHsz',
+      appKey: 'Mo96Mq3gkkLw4sE0ovFOTBbH',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      pjax.loadUrl('/404.html')
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜素文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
