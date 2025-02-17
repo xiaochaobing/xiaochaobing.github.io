@@ -456,3 +456,27 @@ tabContents.innerHTML = Object.keys(allData).map(item => `
     </div>
 `).join('');
 
+// 在原有代码后添加以下内容
+
+// 添加选项卡切换逻辑
+document.querySelectorAll('.tab button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        // 移除所有active类
+        document.querySelectorAll('.tab-item-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        document.querySelectorAll('.tab button').forEach(b => {
+            b.classList.remove('active');
+        });
+
+        // 添加新的active类
+        const target = document.querySelector(btn.dataset.href);
+        if (target) {
+            target.classList.add('active');
+            btn.classList.add('active');
+        }
+    });
+});
+
+// 初始化第一个选项卡
+document.querySelector('.tab button').classList.add('active');
