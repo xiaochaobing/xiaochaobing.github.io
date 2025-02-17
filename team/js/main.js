@@ -226,3 +226,24 @@ tabContents.innerHTML = years.map(year => `
         </table>
     </div>
 `).join('');
+
+// 获取所有选项卡按钮
+document.querySelectorAll('.nav-tabs .tab button').forEach(button => {
+    button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-href').substring(1); // 获取目标年份ID
+        
+        // 移除所有内容区域的 active 类
+        document.querySelectorAll('.tab-item-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        // 添加 active 类到对应内容
+        document.getElementById(targetId).classList.add('active');
+        
+        // 可选：切换按钮的激活状态（如需要样式变化）
+        document.querySelectorAll('.nav-tabs .tab button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        button.classList.add('active');
+    });
+});
